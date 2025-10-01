@@ -1,0 +1,31 @@
+<html></html>
+<head>
+    <title>BROOKLIN BARABER</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BROOKLIN BARABER</h1>
+        <h2>Barbero: David Rodríguez</h2>
+        <form id="citaForm">
+            <label>Nombre del cliente:</label>
+            <input type="text" id="nombre" required>
+            <label>Fecha:</label>
+            <input type="date" id="fecha" required>
+            <label>Hora:</label>
+            <input type="time" id="hora" required>
+            <label>Servicio:</label>
+            <select id="servicio" required>
+                <option value="Corte de cabello">Corte de cabello</option>
+                <option value="Barba">Barba</option>
+                <option value="Corte y Barba">Corte y Barba</option>
+                <option value="Color">Color</option>
+            </select>
+            <button type="submit">Agendar cita</button>
+        </form>
+        <h3>Citas agendadas</h3>
+        <ul id="listaCitas"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
