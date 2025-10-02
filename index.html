@@ -1,33 +1,86 @@
-
-
-<html></html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>BROOKLIN BARBER</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería BROOKLIN - Sistema de Citas</title>
 </head>
 <body>
     <div class="container">
-    <h1>BROOKLIN BARBER</h1>
-        <h2>Barbero: David Rodríguez</h2>
-        <form id="citaForm">
-            <label>Nombre del cliente:</label>
-            <input type="text" id="nombre" required>
-            <label>Fecha:</label>
-            <input type="date" id="fecha" required>
-            <label>Hora:</label>
-            <input type="time" id="hora" required>
-            <label>Servicio:</label>
-            <select id="servicio" required>
-                <option value="Corte de cabello">Corte de cabello</option>
-                <option value="Barba">Barba</option>
-                <option value="Corte y Barba">Corte y Barba</option>
-                <option value="Color">Color</option>
-            </select>
-            <button type="submit">Agendar cita</button>
-        </form>
-        <h3>Citas agendadas</h3>
-        <ul id="listaCitas"></ul>
+        <div class="header">
+            <h1>BARBERÍA BROOKLIN</h1>
+            <p>Tu Estilo, Nuestra Pasión</p>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>📅 Reservar Cita</h2>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <label for="clientName">👤 Nombre del Cliente:</label>
+                        <input type="text" id="clientName" name="clientName" required placeholder="Ingrese su nombre completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentDate">📅 Fecha:</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime">⏰ Hora:</label>
+                        <select id="appointmentTime" name="appointmentTime" required>
+                            <option value="">Seleccione una hora</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="09:30">09:30 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="10:30">10:30 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="14:30">02:30 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="15:30">03:30 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                            <option value="16:30">04:30 PM</option>
+                            <option value="17:00">05:00 PM</option>
+                            <option value="17:30">05:30 PM</option>
+                            <option value="18:00">06:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>✂️ Servicios:</label>
+                        <div class="services-group">
+                            <div class="service-option">
+                                <input type="checkbox" id="corte" name="services" value="Corte de Pelo">
+                                <label for="corte">Corte de Pelo</label>
+                            </div>
+                            <div class="service-option">
+                                <input type="checkbox" id="corteBarba" name="services" value="Corte con Barba">
+                                <label for="corteBarba">Corte con Barba</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">🗓️ Confirmar Cita</button>
+                </form>
+                
+                <div class="barber-info">
+                    <strong>💼 Barbero: David R</strong>
+                </div>
+            </div>
+
+            <div class="appointments-section">
+                <h2>📋 Citas Registradas</h2>
+                <div id="appointmentsList">
+                    <div class="no-appointments">
+                        No hay citas registradas
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
+
